@@ -1,0 +1,22 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block branding %}
+    <title>autolog</title> 
+    <h1 id="head">autolog Administration</h1>
+    <span class="brand-text font-weight-light">autolog Administration</span>
+{% endblock branding %}
+    
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock extrastyle %}
+{% block extrahead %}
+{{ block.super }}
+<style>
+    .field-user_url a {
+        pointer-events: none;
+        color: #eee; /* You can adjust the color to your preference */
+        text-decoration: none; /* Optional: Remove underline */
+    }
+</style>
+{% endblock %}
